@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.d{
+				width: 100%;
+				height: 600px;
+				border: 1px solid gray;
+				display: none;
+			}
+			.d:first-of-type{
+				display: block;
+			}
+			span{
+				margin-left: 10px;
+				display: inline-block;
+				width: 80px;
+				height: 30px;
+				background: darkcyan;
+				color: white;
+				font-size: 18px;
+				text-align: center;
+				line-height: 30px;
+				border-radius: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<span>按钮1</span>
+		<span>按钮2</span>
+		<span>按钮3</span>
+		<span>按钮4</span>
+		<div class="d">第一项</div>
+		<div class="d">第二项</div>
+		<div class="d">第三项</div>
+		<div class="d">第四项</div>
+		<script type="text/javascript">
+			var  sp=document.getElementsByTagName("span");
+			var  d=document.getElementsByClassName("d");
+			for(let i=0;i<d.length;i++){
+				sp[i].onclick=function(){
+					for(var j=0;j<d.length;j++){
+						d[j].style.display="none";
+					}
+					d[i].style.display="block";
+				}
+			}
+			
+		</script>
+	</body>
+</html>
